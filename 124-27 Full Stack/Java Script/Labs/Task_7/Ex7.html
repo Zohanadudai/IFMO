@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Ex7</title>
+  <script language="JavaScript">
+  subjects=new Array("Русский язык","Литература","Английский","История","География","Алгебра","Геометрия","Химия","Физика","Информатика");
+
+  function human()  {
+  humanitarian=new Array();
+  humanitarian=subjects.slice(0,4);
+  document.write(humanitarian+"<br>");
+  }
+
+  function exact()  {
+    exact_science=new Array();
+    exact_science=subjects.slice(5,9);
+    document(exact_science+"<br>");
+  }
+  </script>
+</head>
+
+<body>
+  <p>Выберите раздел:</p>
+  <input type="button" onclick="human()" value="Гуманитарные науки">
+  <input type="button" onclick="exact()" value="Точные науки">
+</body>
+</html>
