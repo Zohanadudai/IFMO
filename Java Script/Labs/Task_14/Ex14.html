@@ -1,1 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Ex14</title>
+  <Script>
+    // var input_name = document.getElementById("input_name");
+    // let password = document.getElementById('password');
+    // let password2 = document.getElementById('password2');
+    // let email = document.getElementById('email');
+    // let theme = document.getElementById('theme');
+    // let message = document.getElementById('message');
+    function clearForm(){
 
+    }
+
+    function inputCheck(){
+        if(input_name.value == "") {
+            alert("Заполните Имя");
+            input_name.focus();
+        }
+        else if(input_password.value == "") {
+            alert("Придумайте пароль");
+            input_password.focus();
+        }
+        else if(input_password.value.length < 4 ) {
+            alert("Пароль должен быть не менее 4 символов");
+            input_password.focus();
+        }
+        else if(input_password2.value == "") {
+            alert("Введите пароль еще раз");
+            input_password2.focus();    
+        }
+        else if(input_password2.value != input_password.value) {
+            alert("Введенные пароли не совпадают!");
+            input_password2.focus();
+        }
+        else if(input_email.value == "") {
+            alert("Введите E-mail");
+            input_email.focus();
+        }
+        else if(!input_email.value.includes("@")){
+            alert("Введите действительный E-mail");
+            input_email.focus();
+        }
+        else if(input_message.value == ""){
+            alert("Введите текст обращения");
+            input_message.focus();
+        }
+        else if(input_message.value.length < 10 ) {
+            alert("Сообщение должно содержать минимум 10 символов");
+            input_message.focus();
+        }
+        }
+ 
+  </Script>
+</head>
+<body>
+    <h1>Форма заполнения данных</h1>
+    <form id="inputForm">
+    <table>
+    <tr>
+        <td>Ваше имя: </td>
+        <td><input id="input_name" type="text"></td>
+    </tr>
+    <tr>
+        <td>Пароль: <sup>*</sup></td>
+        <td><input id="input_password" type="password"></td>
+    </tr>
+    <tr>
+        <td>Подтвердите пароль: <sup>*</sup></td>
+        <td><input id="input_password2" type="password"></td>
+    </tr>
+    <tr>
+        <td>Email: <sup>*</sup></td>
+        <td><input id="input_email" type="email"></td>
+    </tr>
+    <tr>
+        <td>Тема обращения: </td>
+        <td><input id="input_theme" type="text"></td>
+    </tr>
+    <tr>
+        <td>Сообщение: </td>
+        <td><textarea id="input_message"></textarea></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td><input type="button" value="Отправить" onclick="inputCheck()">
+        <input type="button" value="Очистить" onclick="this.form.reset()"></td>
+
+    </tr>
+    </table>
+</form>
+    <!-- <p>Ваше имя: <sup>*</sup> <input id="name" type="text"></p>
+    <p>Пароль: <sup>*</sup> <input id="password" type="password"></p>
+    <p>Подтвердите пароль: <sup>*</sup> <input id="password2" type="password"></p>
+    <p>Email: <sup>*</sup> <input id="email" type="email"></p>
+    <p>Тема обращения: <input id="theme" type="text"></p>
+    <p>Сообщение: <textarea id="message"></textarea></p> -->
+</body>
+</html>
