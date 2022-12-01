@@ -1,1 +1,71 @@
-
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Information</title>
+<link href="global.css" rel="stylesheet">
+<script>
+	function inputCheck(){
+		let a = input_name.value
+    if(input_name.value == "") {
+        alert("Enter your NAME");
+	}
+    else if(input_email.value == "") {
+        alert("Enter your E-MAIL");
+    }
+    else if(!input_email.value.includes("@")){
+        alert("Enter your real E-MAIL");
+    }
+    else if(!radio1.checked && !radio2.checked && !radio3.checked){
+        alert("Rate your apartment farming skills");
+    }
+	else if(input_refer.selectedIndex == ""){
+		alert("Tell where did you hear about us?");
+	}
+	else alert("You are successfully subscribed!");
+    }
+    
+</script>
+</head>
+<body>
+<h1>Reader Subscription Form</h1>
+<form class="subform"  method="post">
+	<p>
+		<label for="name" class="label">What is your name?</label>
+		<input type="text" name="name" id="input_name">
+	</p>
+	<p>
+		<label for="email" class="label">What is your email address?</label>
+		<input type="text" name="email" id="input_email">
+	</p>
+	<p><span class="label">Rate your apartment farming skills
+        </span><label>
+			<input name="skill" type="radio" value="novice" id="radio1">
+			Novice</label>
+		<label>
+			<input name="skill" type="radio" value="intermediate" id="radio2">
+			Intermediate</label>
+		<label>
+			<input name="skill" type="radio" value="advanced" id="radio3">
+			Advanced</label>
+	</p>
+	<p>
+		<label for="refer" class="label">Where did you hear about us? </label>
+		<select name="refer" id="input_refer">
+			<option value="null">Select</option>
+			<option value="1">Friend</option>
+			<option value="2">Internet</option>
+			<option value="3">Paper</option>
+			<option value="4">Other</option>
+		</select>
+	</p>
+	<p>
+		<label for="comments" class="label">Additional comments </label>
+		<textarea name="comments" cols="35" rows="4" id="comments"></textarea>
+	</p>
+	<p>
+		<input type="submit" value="Subscribe" onclick="inputCheck()">
+	</p>
+</form>
+</body>
+</html>
