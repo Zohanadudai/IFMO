@@ -10,21 +10,27 @@
 		let a = input_name.value
     if(input_name.value == "") {
         alert("Enter your NAME");
+		event.preventDefault()
 	}
 	else if(input_name.value.match(/\d/)){
 		alert("NAME must not contains digits");
+		event.preventDefault()
 	}
     else if(input_email.value == "") {
         alert("Enter your E-MAIL");
+		event.preventDefault()
     }
 	else if(!input_email.value.match(pattern_email)){
 		alert("Enter your valid E-MAIL");
+		event.preventDefault()
 	}
     else if(!radio1.checked && !radio2.checked && !radio3.checked){
         alert("Rate your apartment farming skills");
+		event.preventDefault()
     }
 	else if(input_refer.selectedIndex == ""){
 		alert("Tell where did you hear about us?");
+		event.preventDefault()
 	}
 	else alert("You are successfully subscribed!");
     }
