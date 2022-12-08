@@ -36,14 +36,16 @@
         window.location.href="../Task_03/Ex3.html"
       }
     }
+    function navigatorFeatures(){
+      document.write("appName: "+navigator.appName+"<br>")
+      document.write("appCodeName: "+navigator.appCodeName+"<br>")
+      document.write("userAgert: "+navigator.userAgent+"<br>")
+    }
   </script>
 </head>
 <body>
-  <script>
-    document.write("appName: "+navigator.appName+"<br>")
-    document.write("appCodeName: "+navigator.appCodeName+"<br>")
-    document.write("userAgert: "+navigator.userAgent+"<br>")
-  </script>
+  <div>Browser Information:</div>
+  <script>navigatorFeatures();</script>
   <br>
   <input type="button" value="Check your browser" onclick="browserCheck()">
 </body>
