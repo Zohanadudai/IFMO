@@ -13,9 +13,7 @@
     }
     function onclickConfirm(){
       var result = window.confirm("Для просмотра файла необходим Acrobat Reader");
-      if (result) {
-        alert("ddddd");
-      } 
+      if (result) {} 
       else {
         event.preventDefault();
       }
@@ -24,7 +22,7 @@
   <title>Ex12</title>
 </head>
 <body>
-<a href="https://www.ikea.com/ma/en/assembly_instructions/obegraensad-desk-black__AA-2312170-2-1.pdf" download="instruction.pdf">Скачать инструкцию по сборке стола Ikea</a>
+<a href="https://www.ikea.com/ma/en/assembly_instructions/obegraensad-desk-black__AA-2312170-2-1.pdf" download="instruction.pdf" onclick="onclickConfirm()">Скачать инструкцию по сборке стола Ikea</a>
 <br>
 <br>
 <a href="#" onmouseover="changeBgColorRed()" onmouseleave="changeBgColorWhite()">Наведи на меня для изменения цвета фона документа</a>
