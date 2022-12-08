@@ -6,7 +6,36 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Document</title>
   <script>
-    //if (navigator.appName=)
+    function browserCheck() {
+      if (navigator.userAgent.indexOf("Firefox") > -1) {
+        alert("You use Firefox Browser and you'll be redirected to Ex3.html");
+        window.location.href="../Task_03/Ex3.html"
+      }
+      else if (navigator.userAgent.indexOf("Opera") > -1) {
+        window.location.href="../Task_03/Ex3.html"
+        alert("You use Opera Browser and you'll be redirected to Ex3.html");
+      }
+      else if (navigator.userAgent.indexOf("Trident") > -1) {    // TRIDENT - IE Explorer Engine
+        alert("You use IE Explorer Browser and you'll be redirected to Ex1.html");
+        window.location.href="../Task_01/Ex1.html"
+      }
+      else if (navigator.userAgent.indexOf("Edge") > -1) {
+        alert("You use MS Edge Browser and you'll be redirected to Ex3.html");
+        window.location.href="../Task_03/Ex3.html"
+      }
+      else if (navigator.userAgent.indexOf("Chrome") > -1) {
+        alert("You use Chrome Browser and you'll be redirected to Ex3.html");
+        window.location.href="../Task_03/Ex3.html"
+      }
+      else if (navigator.userAgent.indexOf("Safari") > -1) {
+        alert("You use Safari Browser and you'll be redirected to Ex3.html");
+        window.location.href="../Task_03/Ex3.html"
+      }
+      else {
+        alert("You use Unknown Browser and you'll be redirected to Ex3.html");
+        window.location.href="../Task_03/Ex3.html"
+      }
+    }
   </script>
 </head>
 <body>
@@ -14,12 +43,8 @@
     document.write("appName: "+navigator.appName+"<br>")
     document.write("appCodeName: "+navigator.appCodeName+"<br>")
     document.write("userAgert: "+navigator.userAgent+"<br>")
-    //if (navigator.userAgent.includes('Chrome'){
-    //  window.location.href('file:///Users/macbook/Desktop/IFMO/124-27%20Full%20Stack/Java%20Script/Labs/Task_3/Ex1.html')
-    //}
-   // else {
-   //   window.location.href('file:///Users/macbook/Desktop/IFMO/124-27%20Full%20Stack/Java%20Script/Labs/Task_3/Ex3.html')
-    //}
   </script>
+  <br>
+  <input type="button" value="Check your browser" onclick="browserCheck()">
 </body>
 </html>
